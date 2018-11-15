@@ -1,3 +1,10 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/HowtoObtainUnderlyingData/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/HowtoObtainUnderlyingData/MainWindow.xaml))
+* [MainWindow.xaml.cs](./CS/HowtoObtainUnderlyingData/MainWindow.xaml.cs) (VB: [MainWindow.xaml](./VB/HowtoObtainUnderlyingData/MainWindow.xaml))
+* [ViewModel.cs](./CS/HowtoObtainUnderlyingData/ViewModel.cs) (VB: [ViewModel.vb](./VB/HowtoObtainUnderlyingData/ViewModel.vb))
+<!-- default file list end -->
 # How to: Obtain Underlying Data
 
 
