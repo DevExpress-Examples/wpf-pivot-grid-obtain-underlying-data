@@ -2,20 +2,26 @@
 using DevExpress.Mvvm.DataAnnotations;
 using DevExpress.Mvvm.POCO;
 using DevExpress.Xpf.PivotGrid;
-using HowtoObtainUnderlyingData.NwindDataSetTableAdapters;
+using System.Data;
+using System.Data.SQLite;
 
-namespace HowtoObtainUnderlyingData {
+
+namespace HowToObtainUnderlyingData
+{
     [POCOViewModel]
     public class ViewModel {
-        NwindDataSet.SalesPersonDataTable salesPersonDataTable = new NwindDataSet.SalesPersonDataTable();
-        SalesPersonTableAdapter salesPersonDataAdapter = new SalesPersonTableAdapter();
-
-        public NwindDataSet.SalesPersonDataTable DataSource { get { return salesPersonDataTable; } }
-
+        public DataTable DataSource { get; } = new DataTable();
         protected ViewModel() {
-            salesPersonDataAdapter.Fill(salesPersonDataTable);
+            var connection = System.Configuration.ConfigurationManager.ConnectionStrings["nwind"].ConnectionString;
+            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\DataSources\nwind.db;"))
+            {
+                conn.Open();
+                SQLiteCommand command = new SQLiteCommand("Select * from SalesPerson", conn);
+                SQLiteDataReader reader = command.ExecuteReader();
+                DataSource.Load(reader);
+                reader.Close();
+            }
         }
-
         public void ShowDrillDownData(CellInfo cellInfo) {
             this.GetService<IDialogService>().ShowDialog(MessageButton.OK, "Drill Down Results", cellInfo);
         }
