@@ -2,7 +2,7 @@
 
 This example demonstrates how to obtain the records from the control's underlying data source for a particular cell. Double-click a cell to invoke a form that contains a grid to show the underlying data.
 
-![Display Underlying (Drill-Down) Records](/Images/screenshot.png)
+![Display Underlying (Drill-Down) Records](Images/screenshot.png)
 
 This example is based on the [DevExpress MVVM Framework](https://docs.devexpress.com/WPF/15112).  When a user double-clicks a cell, the [EventToCommand](https://docs.devexpress.com/WPF/17369) class invokes the bound **ShowDrillDownDataCommand** defined in the ViewModel. 
 
@@ -23,9 +23,9 @@ The command calls the **DialogService.ShowDialog** method to invoke a custom win
 <!-- default file list -->
 ## Files to Look At
 
-* [MainWindow.xaml](./CS/HowToObtainUnderlyingData/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/HowToObtainUnderlyingData/MainWindow.xaml))
-* [MainWindow.xaml.cs](./CS/HowToObtainUnderlyingData/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/HowToObtainUnderlyingData/MainWindow.xaml.vb))
-* [ViewModel.cs](./CS/HowToObtainUnderlyingData/ViewModel.cs) (VB: [ViewModel.vb](./VB/HowToObtainUnderlyingData/ViewModel.vb))
+* [MainWindow.xaml](CS/ObtainUnderlyingData/MainWindow.xaml) (VB: [MainWindow.xaml](VB/ObtainUnderlyingData/MainWindow.xaml))
+* [MainWindow.xaml.cs](CS/ObtainUnderlyingData/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](VB/ObtainUnderlyingData/MainWindow.xaml.vb))
+* [ViewModel.cs](CS/ObtainUnderlyingData/ViewModel.cs) (VB: [ViewModel.vb](VB/ObtainUnderlyingData/ViewModel.vb))
 <!-- default file list end -->
 
 
