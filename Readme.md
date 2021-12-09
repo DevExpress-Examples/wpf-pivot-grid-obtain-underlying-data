@@ -1,4 +1,4 @@
-# How to: Display Underlying (Drill-Down) Records
+# Pivot Grid for WPF - How to Display Underlying (Drill-Down) Records
 
 This example demonstrates how to obtain the records from the control's underlying data source for a particular cell. Double-click a cell to invoke a form that contains a grid to show the underlying data.
 
