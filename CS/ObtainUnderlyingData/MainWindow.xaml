@@ -39,7 +39,8 @@
     </dxmvvm:Interaction.Behaviors>
 
     <Grid>
-        <dxpg:PivotGridControl x:Name="pivot" DataSource="{Binding DataSource}" RowTreeWidth="170">
+        <dxpg:PivotGridControl x:Name="pivot" DataSource="{Binding DataSource}" RowTreeWidth="170" 
+                               DataProcessingEngine="Optimized">
             <dxpg:PivotGridControl.InputBindings>
                 <KeyBinding
                     Key="Enter"
@@ -59,34 +60,51 @@
             <dxpg:PivotGridControl.Fields>
                 <dxpg:PivotGridField
                     Area="RowArea"
-                    FieldName="Country"
-                    Name="fieldCountry" />
+                    Name="fieldCountry" >
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="Country"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
                 <dxpg:PivotGridField
                     Area="RowArea"
                     Caption="Customer"
-                    FieldName="FullName"
-                    Name="fieldCustomer" />
+                    Name="fieldCustomer" >
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="FullName"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
                 <dxpg:PivotGridField
                     Area="ColumnArea"
                     Caption="Year"
-                    FieldName="OrderDate"
-                    GroupInterval="DateYear"
-                    Name="fieldYear" />
+                    Name="fieldYear" >
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="OrderDate" GroupInterval="DateYear"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
                 <dxpg:PivotGridField
                     Area="ColumnArea"
                     Caption="Product Category"
-                    FieldName="CategoryName"
-                    Name="fieldCategoryName" />
+                    Name="fieldCategoryName" >
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="CategoryName"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
                 <dxpg:PivotGridField
                     Area="FilterArea"
                     Caption="Product Name"
-                    FieldName="ProductName"
-                    Name="fieldProductName" />
+                    Name="fieldProductName" >
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="ProductName"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
                 <dxpg:PivotGridField
                     Area="DataArea"
                     CellFormat="c0"
-                    FieldName="ExtendedPrice"
-                    Name="fieldExtendedPrice" />
+                    Name="fieldExtendedPrice" >
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="ExtendedPrice"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
             </dxpg:PivotGridControl.Fields>
         </dxpg:PivotGridControl>
     </Grid>

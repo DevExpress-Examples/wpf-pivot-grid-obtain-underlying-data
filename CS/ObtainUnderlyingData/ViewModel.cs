@@ -12,8 +12,7 @@ namespace HowToObtainUnderlyingData
     public class ViewModel {
         public DataTable DataSource { get; } = new DataTable();
         protected ViewModel() {
-            var connection = System.Configuration.ConfigurationManager.ConnectionStrings["nwind"].ConnectionString;
-            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\DataSources\nwind.db;"))
+            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=nwind.db;"))
             {
                 conn.Open();
                 SQLiteCommand command = new SQLiteCommand("Select * from SalesPerson", conn);

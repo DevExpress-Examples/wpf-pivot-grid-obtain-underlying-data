@@ -12,7 +12,7 @@ Namespace HowToObtainUnderlyingData
 		Public ReadOnly Property DataSource() As New DataTable()
 		Protected Sub New()
 			Dim connection = System.Configuration.ConfigurationManager.ConnectionStrings("nwind").ConnectionString
-			Using conn As New SQLiteConnection("Data Source=C:\DataSources\nwind.db;")
+			Using conn As New SQLiteConnection("Data Source=nwind.db;")
 				conn.Open()
 				Dim command As New SQLiteCommand("Select * from SalesPerson", conn)
 				Dim reader As SQLiteDataReader = command.ExecuteReader()
