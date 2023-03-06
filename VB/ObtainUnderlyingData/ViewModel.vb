@@ -5,6 +5,7 @@ Imports DevExpress.Xpf.PivotGrid
 Imports System.Data
 Imports System.Data.SQLite
 
+
 Namespace HowToObtainUnderlyingData
 	<POCOViewModel>
 	Public Class ViewModel
