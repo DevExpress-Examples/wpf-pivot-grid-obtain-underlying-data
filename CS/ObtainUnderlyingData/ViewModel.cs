@@ -5,15 +5,12 @@ using DevExpress.Xpf.PivotGrid;
 using System.Data;
 using System.Data.SQLite;
 
-
-namespace HowToObtainUnderlyingData
-{
+namespace HowToObtainUnderlyingData {
     [POCOViewModel]
     public class ViewModel {
         public DataTable DataSource { get; } = new DataTable();
         protected ViewModel() {
-            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=nwind.db;"))
-            {
+            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=nwind.db;")) {
                 conn.Open();
                 SQLiteCommand command = new SQLiteCommand("Select * from SalesPerson", conn);
                 SQLiteDataReader reader = command.ExecuteReader();
