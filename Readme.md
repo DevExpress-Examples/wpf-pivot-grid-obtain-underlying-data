@@ -45,7 +45,7 @@ The command calls the **DialogService.ShowDialog** method to invoke a custom win
 
 * [How to Use CreateDrillDownDataSource Methods to Display Underlying (Drill-Down) Data](https://github.com/DevExpress-Examples/wpf-pivotgrid-how-to-display-underlying-data)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-pivot-grid-obtain-underlying-data&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-pivot-grid-obtain-underlying-data&~~~was_helpful=no)
 
